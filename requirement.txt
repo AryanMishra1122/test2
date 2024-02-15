@@ -1,6 +1,5 @@
 streamlit
 pandas
 numpy
-plotly.express
 plotly==5.3.1
 cufflinks
