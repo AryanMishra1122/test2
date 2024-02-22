@@ -61,8 +61,10 @@ if df is not None:
 
         # Scatter Plot: Unit Cost vs Revenue
         st.subheader("Scatter Plot: Unit Cost vs Revenue")
+        selected_country = st.selectbox("select country", df['Country'].unique())
+        a = df[df['Country'] == selected_country][['Unit Cost','Revenue']]
         fig_scatter = px.scatter(
-            df,
+            a,
             x='Unit Cost',
             y='Revenue',
             title='Unit Cost vs Revenue',
